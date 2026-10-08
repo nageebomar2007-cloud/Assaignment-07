@@ -1,20 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState,useEffect } from "react";
 
 
 const NavBer = () => {
-  const [date, setDate] = useState("");
-
-  useEffect(() => {
-    const date = new Date();
-
-    const formatedData = date.toLocaleDateString("bn-BD", {
-      dateStyle: "full",
-    });
-
-    setDate(formatedData);
-  }, []);
+  const [date ,setDate] = useState("") ;
+  useEffect(()=>{
+    setDate(
+         new Date().toLocaleDateString("bn-BD", { dateStyle: "full" })
+  );
+    
+  },[]);
+    
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -24,7 +21,7 @@ const NavBer = () => {
             src={"/logo-icon.png"}
             alt="shoping cart"
             height={40}
-            width={20}
+            width={30}
           ></Image>
         </div>
         <div>

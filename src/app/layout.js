@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         <NavBer />
         <NavLinks />
         <Marquee />
+        
         {children}
 
         <Footer />
