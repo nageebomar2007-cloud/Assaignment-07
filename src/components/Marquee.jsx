@@ -37,7 +37,7 @@ const Marquee = async () => {
                         : "text-gray-500"
                   }
                 >
-                  {item.change.dir==="up"?"▲":item.change.dir==="down"?"▼":"="}
+                  {item.change.dir==="up"?"▼":item.change.dir==="down"?"▲":"="}
                 </p>
                 <p>{item.change.pct}%</p>
               </div>

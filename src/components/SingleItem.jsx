@@ -10,9 +10,6 @@ const getCategoryProducts = async (categoryId) => {
   });
 
   if (!res.ok) {
-    console.log("URL:", url);
-    console.log("Status:", res.status, res.statusText);
-    console.log("Body:", await res.text());
     throw new Error("Failed to fetch categories");
   }
   const data = await res.json();
@@ -24,9 +21,10 @@ const SingleItem = async ({ categoryId }) => {
   console.log(categoryProducts, "categoryProducts");
 
   return (
-    <div>
-      <p>{categoryId.icon}</p>
-      <p>{categoryId.nameBn}</p>
+    <div className="flex items-center gap-3 my-15">
+      <span className="text-4xl">{categoryProducts.icon}</span>
+      <h1 className="text-2xl font-bold">{categoryProducts.nameBn}</h1>
+      <p>{} টি পণ্যের আজকের দাম ও পরিবর্তন</p>
     </div>
   );
 };

@@ -38,9 +38,9 @@ const ProductCard = ({product}) => {
             >
               <span className="text-[10px]">
                 {product.change.dir === "up"
-                  ? "▲"
+                  ? "▼"
                   : product.change.dir === "down"
-                    ? "▼"
+                    ? "▲"
                     : "="}
               </span>
               {product.change.pct}%
