@@ -27,7 +27,6 @@ const NavBer = () => {
       </div>
 
       <div>
-        {" "}
         <UserInfo />
       </div>
     </div>

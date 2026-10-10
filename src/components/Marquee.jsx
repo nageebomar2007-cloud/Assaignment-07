@@ -20,27 +20,34 @@ const Marquee = async () => {
 
   return (
     <div>
-      <MarqueeText direction="right" duration={9} >
+      <MarqueeText direction="right" duration={9}>
         <div className="flex gap-10 mt-6">
           {data.map((item) => (
             <div key={item.id} className="flex">
-              <div className="flex gap-2">
-                <h2>{item.image}</h2>
-                <Link href={item.slug}>{item.nameBn}</Link>
-                <p>{item.today}টাকা/কেজি</p>
-                <p
-                  className={
-                    item.change.pct > 0
-                      ? "text-green-500"
-                      : item.change.pct < 0
-                        ? "text-red-600"
-                        : "text-gray-500"
-                  }
-                >
-                  {item.change.dir==="up"?"▼":item.change.dir==="down"?"▲":"="}
-                </p>
-                <p>{item.change.pct}%</p>
-              </div>
+              <Link href={item.slug}>
+                {" "}
+                <div className="flex gap-2">
+                  <h2>{item.image}</h2>
+                  <p>{item.nameBn}</p>
+                  <p>{item.today}টাকা/কেজি</p>
+                  <p
+                    className={
+                      item.change.pct > 0
+                        ? "text-green-500"
+                        : item.change.pct < 0
+                          ? "text-red-600"
+                          : "text-gray-500"
+                    }
+                  >
+                    {item.change.dir === "up"
+                      ? "▼"
+                      : item.change.dir === "down"
+                        ? "▲"
+                        : "="}
+                  </p>
+                  <p>{item.change.pct}%</p>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
