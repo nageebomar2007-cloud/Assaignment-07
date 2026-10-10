@@ -1,4 +1,4 @@
-<!-- বাজার দর (Bazar Dor)
+বাজার দর (Bazar Dor)
 
 A Bengali-language web app that shows daily market prices of everyday products across Bangladesh. Browse products by category, compare prices between markets and divisions, and see how today's price changed from yesterday. Sign-in is required to view full product details.
 
@@ -163,4 +163,4 @@ License
 
 This project was built for learning purposes.
 
- -->
+
