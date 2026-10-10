@@ -4,6 +4,8 @@ import NavBer from "@/components/NavBer";
 import Footer from "@/components/Footer";
 import NavLinks from "@/components/NavLinks";
 import Marquee from "@/components/Marquee";
+import { Suspense } from "react";
+export const instant = false;
 
 const notoSerifBengali = Noto_Serif_Bengali({
   variable: "--font-geist-mono",
@@ -23,13 +25,15 @@ export default function RootLayout({ children }) {
       className={`${notoSerifBengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col container mx-auto">
-        <NavBer />
-        <NavLinks />
-        <Marquee />
-        
-        {children}
+        <Suspense fallback={<div>...loading</div>}>
+          <NavBer />
+          <NavLinks />
+          <Marquee />
 
-        <Footer />
+          {children}
+
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

@@ -20,7 +20,7 @@ const Marquee = async () => {
 
   return (
     <div>
-      <MarqueeText direction="right" duration={8} >
+      <MarqueeText direction="right" duration={9} >
         <div className="flex gap-10 mt-6">
           {data.map((item) => (
             <div key={item.id} className="flex">
