@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NavLinks from "@/components/NavLinks";
 import Marquee from "@/components/Marquee";
 import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
 export const instant = false;
 
 const notoSerifBengali = Noto_Serif_Bengali({
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
           <Marquee />
 
           {children}
-
+          <ToastContainer />
           <Footer />
         </Suspense>
       </body>

@@ -1,7 +1,5 @@
-import Link from "next/link";
-import React from "react";
-import MarqueeText from "react-marquee-text";
-import "react-marquee-text/dist/styles.css";
+import MarqueeClient from "./MarqueeClient";
+
 
 const Marquee = async () => {
   const res = await fetch(
@@ -10,50 +8,16 @@ const Marquee = async () => {
       next: {
         revalidate: 3600,
       },
-    },
+    }
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch categories");
+    throw new Error("Failed to fetch products");
   }
+
   const data = await res.json();
 
-  return (
-    <div>
-      <MarqueeText direction="right" duration={9}>
-        <div className="flex gap-10 mt-6">
-          {data.map((item) => (
-            <div key={item.id} className="flex">
-              <Link href={item.slug}>
-                {" "}
-                <div className="flex gap-2">
-                  <h2>{item.image}</h2>
-                  <p>{item.nameBn}</p>
-                  <p>{item.today}টাকা/কেজি</p>
-                  <p
-                    className={
-                      item.change.pct > 0
-                        ? "text-green-500"
-                        : item.change.pct < 0
-                          ? "text-red-600"
-                          : "text-gray-500"
-                    }
-                  >
-                    {item.change.dir === "up"
-                      ? "▼"
-                      : item.change.dir === "down"
-                        ? "▲"
-                        : "="}
-                  </p>
-                  <p>{item.change.pct}%</p>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </MarqueeText>
-    </div>
-  );
+  return <MarqueeClient data={data} />;
 };
 
 export default Marquee;
