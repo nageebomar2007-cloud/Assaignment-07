@@ -49,7 +49,7 @@ const MarketPrice = async () => {
 
       <div className="my-5">
         <p className="text-3xl font-bold pt-2">সব পণ্য</p>
-        <p>মোট {}টি পণ্য দেখানো হচ্ছে</p>
+        <p>মোট {data.length}টি পণ্য দেখানো হচ্ছে</p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {data.map((item) => (

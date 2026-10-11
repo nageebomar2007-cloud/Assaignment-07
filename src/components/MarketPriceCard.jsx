@@ -13,7 +13,7 @@ const MarketPriceCard = ({ item }) => {
             </div>
             <div>
               <h3 className="text-xl font-bold text-gray-900">{item.nameBn}</h3>
-              <p className="text-sm text-gray-600">প্রতি কেজি</p>
+              <p className="text-sm text-gray-600">প্রতি {item.unit}</p>
             </div>
           </div>
 

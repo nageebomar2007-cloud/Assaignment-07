@@ -28,7 +28,7 @@ const ProductCard = ({ product, caregoryId }) => {
               <h2 className="card-title truncate text-base font-semibold leading-tight">
                 {product.nameBn}
               </h2>
-              <p className="text-xs text-gray-500">প্রতি কেজি</p>
+              <p className="text-xs text-gray-500">প্রতি {product.unit}</p>
             </div>
           </div>
 

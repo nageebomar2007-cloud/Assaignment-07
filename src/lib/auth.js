@@ -12,6 +12,7 @@ const db = client.db("market-condition");
 export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
+
   },
   socialProviders: {
     google: {

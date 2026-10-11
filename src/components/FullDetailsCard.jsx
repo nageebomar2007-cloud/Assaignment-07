@@ -17,7 +17,7 @@ const FullDetailsCard = ({ product, t, summary, taka }) => {
                 {product.nameBn}
               </h1>
               <p className="mt-1 text-xs text-gray-500">
-                প্রতি কেজি · {product.categoryNameBn}
+                প্রতি {product.unit} · {product.categoryNameBn}
               </p>
               <p className="mt-2 text-xs text-gray-800">
                 গতকালের তুলনায় আজ দাম{" "}
