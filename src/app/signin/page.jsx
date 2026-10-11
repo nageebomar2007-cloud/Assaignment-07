@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { VscGithub } from "react-icons/vsc";
+import { toast } from "react-toastify";
 
 const page = () => {
   const onSubmit = async (e) => {
@@ -16,12 +17,12 @@ const page = () => {
       callbackURL: "/", // A URL to redirect to after the user verifies their email (optional)
     });
     if (data) {
-      console.log(data);
+      toast.success("signIn successlly done")
 
       redirect("/");
     }
     if (error) {
-      console.log(error);
+      toast.error("signIn Invalid");
     }
   };
 

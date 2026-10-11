@@ -33,6 +33,7 @@ const MarketPriceCard = ({ item }) => {
                   : "bg-green-50 text-green-600"
               }`}
             >
+            
               <span className="text-xs">
                 {item.change.dir === "up" ? "▲" : "▼"}
               </span>
