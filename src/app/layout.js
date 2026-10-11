@@ -31,7 +31,8 @@ export default function RootLayout({ children }) {
           <NavLinks />
           <Marquee />
 
-          {children}
+          <main className="mx-auto max-w-7xl px-4"> {children}</main>
+
           <ToastContainer />
           <Footer />
         </Suspense>

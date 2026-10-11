@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -12,7 +11,7 @@ const MarqueeClient = ({ data }) => {
 
   const handleRouter = (slug, nameBn) => {
     toast.success(`${nameBn} details successfully shown`);
-    router.push(slug);
+    router.push(`/detailsCard/${slug}`);
   };
 
   return (

@@ -1,4 +1,3 @@
-import ProductCard from "@/components/ProductCard";
 import ProductList from "@/components/ProductList";
 import SingleItem from "@/components/SingleItem";
 import Image from "next/image";
@@ -33,13 +32,6 @@ const ItemDetail = async ({ params }) => {
 
       <ProductList categoryProducts={categoryProducts} categoryId={categoryId} />
 
-
-
-      <div className="grid grid-cols-3 gap-4 bg-[#eef3ee] p-4">
-        {categoryProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 "use client";
-import { VscGithub } from "react-icons/vsc";
+
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
+import { VscGithub } from "react-icons/vsc";
 
 const page = () => {
   const onSubmit = async (e) => {

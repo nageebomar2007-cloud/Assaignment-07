@@ -32,7 +32,7 @@ const UserInfo = () => {
                 />
               </div>
             </div>
-            <span className="text-sm font-semibold text-gray-800">
+            <span className="text-sm font-semibold text-gray-800 hidden sm:inline">
               {user?.name}
             </span>
             <span className="text-xs text-gray-500">▾</span>
@@ -67,10 +67,10 @@ const UserInfo = () => {
       ) : (
         <div>
           <Link href={"/signin"}>
-            <button className="btn w-25"> সাইন ইন</button>
+            <button className="btn btn-sm sm:btn-md"> সাইন ইন</button>
           </Link>
           <Link href={"/signup"}>
-            <button className="btn w-25 text-white  bg-green-600">
+            <button className="btn btn-sm bg-green-600 text-white sm:btn-md">
               সাইন আপ
             </button>
           </Link>

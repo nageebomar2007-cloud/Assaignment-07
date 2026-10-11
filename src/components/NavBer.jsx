@@ -10,7 +10,7 @@ const NavBer = () => {
   }, []);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm flex justify-between">
+    <div className="navbar flex flex-wrap items-center justify-between gap-2 bg-base-100 px-3 shadow-sm">
       <div className="navbar-start gap-2">
         <div className="p-4 bg-green-700 ">
           <Image
@@ -22,7 +22,7 @@ const NavBer = () => {
         </div>
         <div>
           <a className="btn btn-ghost text-xl">বাজার দর</a>
-          <div>{date}</div>
+          <div className="text-xs sm:text-sm">{date}</div>
         </div>
       </div>
 
