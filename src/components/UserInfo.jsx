@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const UserInfo = () => {
   const { data: session } = authClient.useSession();
@@ -10,7 +11,9 @@ const UserInfo = () => {
   const user = session?.user;
 
   const handleSignOut = async () => {
+
     await authClient.signOut();
+    toast.success("sign out successful")
   };
   return (
     <div>

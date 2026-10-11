@@ -46,7 +46,7 @@ const FullDetailsCard = ({ product, t, summary, taka }) => {
             <p className="mt-1 text-4xl font-bold text-gray-900">
               {Number(product.today).toLocaleString("bn-BD")}
             </p>
-            <p className="mt-1 text-xs text-gray-500">টাকা / কেজি</p>
+            <p className="mt-1 text-xs text-gray-500">টাকা / {product.unit}</p>
             <p className={`mt-1 text-xs font-semibold ${t.cls}`}>
               {t.icon}{" "}
               {Math.abs(product.change?.pct ?? 0).toLocaleString("bn-BD")}%

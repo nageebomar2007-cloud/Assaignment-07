@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, caregoryId }) => {
   const href = caregoryId
